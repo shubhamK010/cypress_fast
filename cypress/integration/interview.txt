@@ -1,0 +1,16 @@
+Interview Questions
+
+
+folder---->
+fixture---->testdata
+integration---->testcase
+support---->commands.js====>commands (common utility)
+pluginindex.js=====> plugin configure=====>BOD allure
+support------>index.js====>uncaught exception managed there
+
+support---POM class---elements
+common utility---models
+videos or screen ---when run on command line on failure
+
+
+Why invoke method is used?====>to call method

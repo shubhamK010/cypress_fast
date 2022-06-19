@@ -1,0 +1,68 @@
+
+
+// Q.sabse pehle default configuration kaha se uthayega?==>test runner ke config file se
+Ans.default -----> testrunner config
+
+
+//phir hum isko updake yaha kar sakte hai==> cypress.json 
+
+//phir cypress.json ko overwrite karna hai to commandline se kar sakte hai
+
+
+
+
+// Q.In sab ki kyo jaroorat hai?
+because environment alag alag hote hai e.g.local,staging,canary,production
+
+//  local        staging      canary      production
+//  url           url         url          url 
+// un pwd        un pwd       un pwd       un pwd
+// db pwd        db pwd       db pwd        db pwd
+
+
+
+
+
+//upar ki alag alag cheeje maintain karne ke liye hamare pass 3 tarike hai==>
+// 1)commandline 
+
+//  2)differnt config for every env
+
+// 3)utilities
+
+yahi cheeje maintain karne ke liye django wale ek bande ne ek article likha hai...uska reference hum dekhenge
+
+// har alag alag environment ke liye alag alag baseUrl,userId,password hote hai...to uske liye alag alag tes case bhi likhe ja sakte hai
+Q.to usko maintain kaise karna hai?===> via command line 
+
+
+
+
+//humko command lien se alag alag Url bhjne hai...kyuki environment alag alag hahi...aur alag lag environment ke liye alag alag statements chahiye
+hum har baar cypress.json me jaake base Url change nahi kar sakte isiliye hum command line se value bhejenge 
+au command line se bhejne ke liye ek command hai
+
+npx cypress run --config baseUrl="https://www.yahoo.com/" ====>ye headless mode pe chalega...headless mode matlab humne yaha pe parameters pass nahi kiye
+
+
+
+// command headless mode===>yaha me browser behind the scenes run hoga or headed mode==>yaha pe browser open hote hue dikhega 
+
+
+
+//headed mode(browser open hoga) pe chalane ke liye hume alag parameters pass karne hote hai..uske liye command niche di hai
+npx cypress run --headed -- config baseUrl="https://www.yahoo.com/"  (electron==>ye default browser hai cypress ka isiliye isme open hoga)
+
+
+//lekin mujhe edge browser se open karna hai to niche ki command likho
+npx cypress run--headed--browser edge--config baseUrl="https://www.youtube.com/"
+
+
+//for different config file
+
+npx cypress run headed --config-file staging-config.json
+npx cypress run headed -- browser - edge --config-file staging-config.json
+
+
+
+"shubham\"hello\" kamble"===>here first forward slash is start of string and second forward slash is end of string
