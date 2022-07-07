@@ -26,6 +26,10 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import 'cypress-file-upload';
+
+
+
 Cypress.Commands.add('login', (username, password) => {
 
     cy.visit('https://opensource-demo.orangehrmlive.com/')
